@@ -1,6 +1,7 @@
 BeginPackage[ "MCMPackage`"]
 
 NestedParenthesesToTriangulatedPolygon::usage = "The function build a triangulated polygon that is equivalent to the given nested parentheses."
+NestedParenthesesToTriangulatedPolygonwithLabel::usage = "build partition with label"
 MatrixChainMultOpt::usage = "Find optimal solution for matrix chain multiplication problem."
 
 Begin[ "Private`" ]
@@ -55,6 +56,9 @@ NestedParenthesesToTriangulatedPolygonHelper[s_, label_] :=
 NestedParenthesesToTriangulatedPolygon[s_] := 
   NestedParenthesesToTriangulatedPolygonHelper[s, 
    Range[Length[Flatten[Position[Characters[s], "A"]]] + 1]];
+
+NestedParenthesesToTriangulatedPolygonwithLabel[s_, label_] :=
+NestedParenthesesToTriangulatedPolygonHelper[s, label];
 
 MatrixChainMultOpt[p_] := 
  Module[{MAX = 10^15, n = Length[p] - 1, ans, i, j, t, np},
