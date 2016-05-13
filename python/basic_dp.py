@@ -18,7 +18,7 @@ def optimal_cost(weigts):
 	return m, s
 
 def optimal_solution(s, i, j):
-	return "A" + str(j) if i == j else "(" + get_optimal(s, i, s[(i, j)]) + get_optimal(s, s[(i,j)] + 1, j) + ")"
+	return "A" + str(j) if i == j else "(" + optimal_solution(s, i, s[(i, j)]) + optimal_solution(s, s[(i,j)] + 1, j) + ")"
 
 
 def print_matrix(matrix, n):
@@ -34,6 +34,6 @@ if __name__ == '__main__':
 	m, s = optimal_cost(weights)
 	print('optimal cost:', m[(1, n-1)])
 	print('total run time:', time.time() - b)
-	#print('optimal solution: ', optimal_solution(s, 1, n-1))
+	print('optimal solution: ', optimal_solution(s, 1, n-1))
 	#print_matrix(m, n)
 	#print_matrix(s, n)
