@@ -1,6 +1,3 @@
-![python 3.5]
-![mathematica 10]
-
 # Usage
 
 input file contain 2 lines:
