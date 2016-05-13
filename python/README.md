@@ -1,6 +1,6 @@
 # Usage
 
-input file contain 2 lines:
+The input file contains 2 lines:
 
 Line 1: n
 
