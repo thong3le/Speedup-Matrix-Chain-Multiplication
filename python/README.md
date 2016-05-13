@@ -14,7 +14,7 @@ input:
 
 2 4 3 5
 
-This is the product of 3 matrices M1(2x3), M2(4x3), M3(3x5).
+This is the product of 3 matrices M1(2x4), M2(4x3), M3(3x5).
 
 ouput: optimal cost
 
