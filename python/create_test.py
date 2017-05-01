@@ -1,9 +1,11 @@
 import random
 
-n = 5000
-MAX = 50000
-with open('input/test5000.txt', 'w') as f:
-	#p = [random.randint(1, MAX) for _ in range(n)]
-	p = random.sample(range(1, MAX), n)
-	f.write(str(len(p)) + '\n')
-	f.write(' '.join(map(str, p)))
+n = 100000
+MAX = 5000
+with open('input/testdup.txt', 'w') as f:
+	# generate weights which can have duplicates
+	weights = [random.randint(1, MAX) for _ in range(n)]
+	# generate weights which have no duplicates
+	#weights = random.sample(range(1, MAX), n)
+	f.write(str(len(weights)) + '\n')
+	f.write(' '.join(map(str, weights)))
